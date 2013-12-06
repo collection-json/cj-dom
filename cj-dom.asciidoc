@@ -1,0 +1,38 @@
+////
+2013-12 (mamund) : source for proposed cj-dom
+////
+
+= Collection+JSON Document Object Model =
+:Author: Mike Amundsen
+:Email: mca@amundsen.com
+
+[NOTE]
+====
+This is an experimental document. Nothing is settled. Just ideas.
+_"Nothing to see here, move along now."_ *=8^)*
+====
+
+== Summary ==
+
+== Object Model ==
+
+----
+  // initialize object
+  cj = new cjDOM.load(href|obj);
+  cj.document // returns {collection:{...}}
+
+  // root properties
+  cj.document.href;
+  cj.document.version;
+
+  // top nodes
+  cj.document.nodes(); // returns [links:{},items:{},queries:{},template:{},error:{}]
+  cj.document.node('links|items|queries|template|error'); // returns [] or {}
+  cj.document.links(); // returns [...]
+  cj.document.items(): // returns [...]
+  cj.document.queries(); // returns [...]
+  cj.document.error(); //returns {...}
+  cj.document.template(); // returns {...}
+
+  //  
+----
