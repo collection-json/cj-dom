@@ -45,7 +45,7 @@ _"Nothing to see here, move along now."_ *=8^)*
   l.properties; // returns array of properties
   l.properties[0]; // returns property value based in index
   l.properties['href']; // returns single property value based on name
-
+  
   // items
   items = cj.document.items;
   items.count;
