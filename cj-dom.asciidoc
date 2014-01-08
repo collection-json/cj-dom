@@ -33,9 +33,14 @@ _"Nothing to see here, move along now."_ *=8^)*
   cj.document.queries(); // returns [...]
   cj.document.error(); //returns {...}
   cj.document.template(); // returns {...}
+  cj.document.nodes.addChild(obj); // add links, items, queries, error, template, or extension object
+  cj.document.nodes.removeChild('name');
 
   // links
   links = cj.document.links;
+  cj.document.links.addChild(obj);
+  cj.document.links.removeChild('name');
+  
   links.count;
   links[0]; // returns link object
   l = links['profile']; // returns link object based on link.rel
@@ -45,9 +50,14 @@ _"Nothing to see here, move along now."_ *=8^)*
   l.properties; // returns array of properties
   l.properties[0]; // returns property value based in index
   l.properties['href']; // returns single property value based on name
+  l.properties.addChild(obj|string);
+  l.properties.removeChild('name');
   
   // items
   items = cj.document.items;
+  cj.document.items.addChild(obj);
+  cj.document.items.removeChild('name');
+  
   items.count;
   items[0];
   i = items['http://...'];
@@ -58,11 +68,16 @@ _"Nothing to see here, move along now."_ *=8^)*
   i.properties;
   i.properties[0];
   i.properties['render'];
+  i.properties.addChild(obj|string);
+  i.properties.removeChild('name');
   data = i.data; // returns array of data
   links = i.links; // returns array of links
 
   // queries
   queries = cj.document.queries;
+  cj.document.queries.addChild(obj);
+  cj.document.queries.removeChild('name');
+  
   queries.count;
   queries[0];
   q = queries['avatar']; // based on rel property
@@ -87,6 +102,9 @@ _"Nothing to see here, move along now."_ *=8^)*
 
   // data
   data = cj.document.queries[0].data;
+  data = cj.document.template.data;
+  data = cj.document.items[0].data;
+  
   data.count;
   data[0];
   d = data['firstName']; // based on name property
@@ -96,6 +114,7 @@ _"Nothing to see here, move along now."_ *=8^)*
   d.properties;
   d.properties[0];
   d.properties['name'];
-
+  d.properties.addChild(obj|string);
+  d.properties.removeChild('name');
 
 ----
