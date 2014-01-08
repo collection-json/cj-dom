@@ -13,6 +13,13 @@ _"Nothing to see here, move along now."_ *=8^)*
 ====
 
 == Summary ==
+The idea is to create a Document Object Model that makes is easy to program with +Cj+ representations. The point is not to
+change the +Cj+ message format to _look_ like programming code (e.g. bare JSON). Instead, the point is to treat +Cj+ representations
+the way most treat HTML representations - as a document model that deserves a programming model, too. Most of the design in this
+Javascript model below is meant to look like the HTML DOM and offer familiar constructs to JS developers.
+
+This is all very early design work. Looking for feedback and comments that will make this programming model handy, easy to use,
+and - in the process - make it easier and more enjoyable to work with +Cj+ on both the clients and servers.
 
 == Object Model ==
 
